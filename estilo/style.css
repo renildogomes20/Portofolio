@@ -1,0 +1,36 @@
+@charset "UTF-8";
+/*Mobile first*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    --cor0: rgb(0, 98, 255);
+    --cor1: rgb(38, 91, 155);
+    --cor2: white;
+    --fonte-destaque: "Poppins", sans-serif;
+    --fonte-normal: "Roboto", sans-serif;
+}
+
+header {
+    background-color: var(--cor0);
+    padding: 10px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+
+
