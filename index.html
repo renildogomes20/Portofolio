@@ -6,7 +6,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <link rel="stylesheet" href="estilo/style.css">
+    <link rel="stylesheet" href="estilo/media-query.css">
 
 </head>
 <body>
@@ -14,8 +17,8 @@
         <a href="index.html"><span class="material-symbols-outlined">home</span></a>
         <a href="#myskills"><span class="material-symbols-outlined">neurology</span></a>
         <a href="#education"><span class="material-symbols-outlined">school</span></a>
-        <span class="material-symbols-outlined">engineering</span>
-        <span class="material-symbols-outlined">
+        <a href="#projectos"><span class="material-symbols-outlined">engineering</span></a>
+        <span id="dark" class="material-symbols-outlined" onclick="clicouDark()">
             dark_mode
         </span>
     </header>
@@ -25,8 +28,14 @@
         <img src="imagens/renildo_photo.jpg" alt="imagem de Renildo"></div>
         <h1>Renildo Gomes</h1>
         <p>Olá! Sou Renildo Gomes, aspirante a engenheiro de software e autodidata em programação. Desde cedo, me dediquei a aprender tecnologias por conta própria, estudando linguagens como Java, Python e JavaScript, além de explorar desenvolvimento web, algoritmos e programação orientada a objetos. Minha jornada autodidata reflete minha disciplina, curiosidade e paixão por resolver problemas através da tecnologia. Desenvolvi diversos projetos pessoais, aplicando meus conhecimentos em soluções práticas e criativas. Meu objetivo é continuar crescendo profissionalmente, contribuir com projetos que impactem positivamente a vida das pessoas e me tornar um desenvolvedor completo, capaz de enfrentar qualquer desafio da área.</p>
+        <p>
+            <a href="https://www.linkedin.com/in/renildo-gomes" target="_blank" rel="noopener norefferer"><i class="fa-brands fa-linkedin icon"></i></a>
+            <a href="https://youtube.com/@renildogomes3441?si=O5aRB72kemfT-Iky" target="_blank" rel="noopener norefferer"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://instagram.com/renildo946038" target="_blank" rel="noopener norefferer"><i class="fa-brands fa-instagram icon"></i></a>
+            <a href="https://renildogomes20.github.io/HTML-CSS/" target="_blank" rel="noopener norefferer"><i class="fa-brands fa-github icon"></i></a>
+        </p>
     
-        </section>
+    </section>
     <section id="presentation">
         <h1><span class="material-symbols-outlined">handshake</span> Deixe me apresentar</h1>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/KwFrvsnxPW0?si=AmbTsU3zJ8Og8H-z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -136,6 +145,10 @@
                 <p>Projeto de interface de tela de login desenvolvido com foco em design moderno e usabilidade.</p>
                 <details>
                     <p>Inclui campos de autenticação, validação de dados e layout responsivo, proporcionando uma experiência simples e intuitiva ao utilizador.</p>
+                    <div class="link">
+                        <span class="material-symbols-outlined">link</span>
+                        <a href="https://renildogomes20.github.io/tela-login/" target="_blank" rel="noopener norefferer">clique aqui para visitar</a>
+                    </div>
                 </details>
             </div>
         </div>
@@ -147,6 +160,10 @@
                 <p>Página web informativa sobre o Android, desenvolvida com foco em estrutura, design e organização de conteúdo.</p>
                 <details>
                     <p>Apresenta a história e características do sistema, utilizando HTML e CSS para criar uma interface atrativa e responsiva.</p>
+                    <div class="link">
+                        <span class="material-symbols-outlined">link</span>
+                        <a href="https://renildogomes20.github.io/projecto-android/" target="_blank" rel="noopener norefferer">clique aqui para visitar</a>
+                    </div>
                 </details>
             </div>
         </div>
@@ -158,14 +175,19 @@
                 <p>Desenvolvimento do jogo Jokenpô (Pedra, Papel e Tesoura), com implementação de lógica condicional e interação com o utilizador.</p>
                 <details>
                     <p>O projeto simula escolhas aleatórias e determina o resultado de cada partida.</p>
-                    <a href="https://renildogomes20.github.io/Game/" target="_blank" rel="noopener norefferer">Click here to play</a>
+                    <div class="link">
+                        <span class="material-symbols-outlined">link</span>
+                        <a href="https://renildogomes20.github.io/Game/" target="_blank" rel="noopener norefferer">Click here to play</a>
+                    </div>
                 </details>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>Portofólio desenvolvido por Renildo Gomes em 2026</p>
+        <p> &copy 2026 Renildo Gomes.All rights reserved</p>
     </footer>
+
+    <script src="script/portofolio.js"></script>
 </body>
 </html>
