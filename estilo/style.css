@@ -13,16 +13,18 @@
 }
 
 :root {
-    --cor0: rgb(0, 47, 255);
+    --cor0: rgb(0, 81, 255);
     --cor1: #0056a3;
     --cor2: white;
     --cor3: #4c89e4;
+    --cor4: rgb(238, 238, 238);
+    --cor5: black;
     --fonte-destaque: "Poppins", sans-serif;
     --fonte-normal: "Roboto", sans-serif;
 }
 
 body {
-    background-color: rgba(220, 216, 216, 0.598);
+    background-color: var(--cor4);
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto auto auto auto auto auto auto;
@@ -72,7 +74,7 @@ section span{
     background-color: var(--cor2);
     padding: 20px;
     margin: 15px;
-    border-radius: 8px;
+    border-radius: 6px;
     box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.246) ;
 }
 section#myinformation > div > img {
@@ -82,7 +84,7 @@ section#myinformation > div > img {
 }
 
 section#myinformation > div {
-    border: 5px solid var(--cor0);
+    border: 5px solid var(--cor3);
     border-radius: 50%;
     width: 215px;
     height: 203px;
@@ -113,13 +115,13 @@ section#myinformation > div {
     flex-flow: column nowrap;
     margin: 0px 15px 0px 15px;
     background-color: var(--cor2);
-    border-radius: 8px;
+    border-radius: 6px;
 }
 
 #presentation > iframe {
     align-self: center;
     width:96%;
-    border-radius: 8px;
+    border-radius: 6px;
     padding: 0px;
     margin: 0px 15px 15px 15px;
 }
@@ -136,7 +138,7 @@ section#myinformation > div {
     flex-flow: column nowrap;
     background-color: var(--cor2);
     margin: 0px 15px 0px 15px;
-    border-radius: 8px;
+    border-radius: 6px;
     font-family: var(--fonte-normal);
     font-weight: bolder;
 }
@@ -220,10 +222,100 @@ div.item {
 
 #education {
     grid-area: 5/1/6/2;
+    background-color: var(--cor2);
+    margin: 0px 15px 0px 15px;
+    font-family: var(--fonte-normal);
+    border-radius: 6px;
+}
+
+#education > h1 {
+    font-family: var(--fonte-destaque);
+    font-weight: bold;
+    color: var(--cor1);
+}
+
+#education p {
+    font-size: 0.8em;
+}
+
+#education div.container {
+    background-color: var(--cor0);
+    margin: 5px 15px 15px 15px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+#education div.item1{
+    background-color: var(--cor4);
+    margin-left: 3px;
+    border-radius: 0px 6px 6px 0px;
+    transform-origin: right;
+    transition: transform 0.4s ease-in-out;
+}
+
+#education div.item1:hover {
+    transform: translateX(8px);
+}
+
+#education > div.container > div.item1 > p{
+    padding-left: 8px;
+}
+
+#education .year-formation {
+    color: var(--cor5);
+    font-weight: bolder;
+    padding-top: 2px;
+}
+
+#education .local-formation {
+    color: var(--cor3);
+}
+
+#education .learned-content {
+    color: rgba(0, 0, 0, 0.72);
+    padding-bottom: 2px;
 }
 
 #projectos {
     grid-area:6/1/7/2;
+    margin: 0px 15px 0px 15px;
+    background-color: var(--cor2);
+    border-radius: 6px;
+}
+
+#projectos div.container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    margin: 5px 15px 15px 15px;
+    background-color: var(--cor3);
+    border-radius: 6px;
+    overflow: hidden;
+
+}
+
+#projectos div.item2 {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-left: 3px;
+    border-radius: 0px 6px 6px 0px;
+    background-color: var(--cor4);
+}
+
+#projectos div.item2:hover {
+    transition: transform 0.4s ease-in-out;
+    transform: translateX(8px);
+}
+
+#projectos  div.item2 > p, details, h4{
+    padding-left: 6px;
+    font-size: 0.9em;
+    line-height: 1.3em;
+    text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.065);
+}
+
+#projectos div.item2 > img {
+    margin: 8px 8px 8px 8px;
 }
 
 footer > p{
