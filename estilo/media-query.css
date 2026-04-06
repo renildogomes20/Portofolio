@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*Configurações para tablet*/
-@media screen and (min-width:768px) and   (max-width: 992px) {
+@media screen and (min-width:768px) {
 
     main {
         display: grid;
@@ -16,6 +16,7 @@
         width: 205px;
         padding: 15px;
         margin: 10px;
+        border-radius: 6px 0px 0px 0px !important;
 
     }
     #myinformation > h1 {
@@ -51,6 +52,15 @@
         margin-left: 10px;
         margin-right: 10px;
     }
+
+    .lado {
+        display: grid;  
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows: auto auto auto ;  
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 10px;
+    }
     
     #education {
         grid-column: 2;
@@ -79,10 +89,12 @@
     #projectos img {
         flex: 1 1 100px;
         width: 25%;
+
     }
 
     .content {
         margin-left: 5px;
     }
+
 
 }

@@ -13,19 +13,35 @@
 }
 
 :root {
-    --cor0: rgb(0, 81, 255);
-    --destaque: #0056a3;
+    --destaque: #0077ff;
+    --destaque-inverso: #66bbff;
     --fundo-principal: #f5f5f5;
-    --cor3: #4c89e4;
     --fundo-card: rgb(238, 238, 238);
-    --texto: black;
-    --cor6: rgba(255, 255, 255, 0.334);
+    --texto: #222222;
+    --texto-inverso: #ffffff;
+    --fundo-card:#ffffff;
+
     --fonte-destaque: "Poppins", sans-serif;
     --fonte-normal: "Roboto", sans-serif;
 }
 
+body.escuro {
+    --fundo-principal: #222222;
+    --texto: #e0e0e0;
+    --texto-inverso: #333333;
+    --destaque: #ff5522;
+    --destaque-inverso:#a73917;
+    --fundo-card: #444444;
+}
+
+body {
+    background-color: var(--fundo-principal);
+    transition:  background-color 0.5s, color 0.5s;
+    color: var(--texto);
+}
+
 header {
-    background-color: var(--cor0);
+    background-color: var(--destaque);
     padding: 10px;
     display: flex;
     flex-flow: row nowrap;
@@ -60,14 +76,15 @@ header > nav > a{
 }
 
 header span:hover {
-    background-color: var(--cor6);
+    background-color: rgba(255, 255, 255, 0.476);
     border-radius: 2px;
+    cursor: pointer;
 }
 
 .icon {
-    padding: 3px 8px 3px 8px;
+    padding: 10px 6px 7px 6px;
     color: var(--destaque);
-    font-size: 22px;
+    font-size: 20px;
     margin-top: 10px;
     
 }
@@ -76,10 +93,13 @@ a:visited {
     color: var(--destaque);
 }
 
+
+
 a> i:hover {
     transition: transform 0.3s ease-in-out;
     transform: scale(1.5);
     border-radius: 3px;
+    cursor: pointer;
 }
 
 main {
@@ -105,7 +125,7 @@ section#myinformation {
     justify-content: center;
     align-items: center;
     background-color: var(--fundo-principal);
-    padding: 20px;
+    padding: 15px;
     border-radius: 6px;
     box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.246);
     margin-top: 20px;
@@ -136,6 +156,8 @@ section#myinformation > div {
     font-size: 1.7em;
     color: var(--destaque);
     margin-bottom: 10px;
+    padding-top:10px;
+    padding-bottom: 10px;
 }
 
 #myinformation  > p {
@@ -149,7 +171,7 @@ section#myinformation > div {
     display: flex;
     flex-flow: column nowrap;
     grid-column: 2;
-    background-color: var(--fundo-principal);
+    background-color: var(--fundo-card);
     border-radius: 6px;
     padding: 15px;
 }
@@ -167,8 +189,7 @@ section#myinformation > div {
 
 #myskills {
     grid-column: 2;
-    background-color: var(--fundo-principal);
-    margin: 0px 15px 0px 15px;
+    background-color: var(--fundo-card);
     border-radius: 6px;
     font-family: var(--fonte-normal);
     font-weight: bolder;
@@ -184,6 +205,7 @@ section#myinformation > div {
     padding: 10px;
 }
 
+
 .skill-info {
     display: flex;
     justify-content: space-between;
@@ -191,7 +213,7 @@ section#myinformation > div {
 
 .skill-percent {
     margin-right: 11px;
-    color: var(--cor3);
+    color: var(--destaque);
     font-weight: bolder;
 }
 
@@ -209,53 +231,34 @@ div.container1 {
     border: 1px solid rgba(0, 0, 0, 0);
     border-radius: 8px;
     margin: 0px 15px 15px 15px;
-    background-color: rgba(227, 223, 223, 0.832);
 }
 
-div.item {
-    text-align: right;
-    height: 8px; 
-    background-color: var(--cor3);
-    border-radius: 5px;
-
+.skill-info span{
+ 
+}
+#myskills progress {
+    width: 100%;
+    height: 10px;
+}
+progress {
+    appearance: none; /* 🔥 importante */
 }
 
-#html5 {
-    width: 60%;
+progress::-webkit-progress-bar {
+    background-color: #ccc;
+    border-radius: 10px;
 }
 
-#css3{
-    width: 65%;
+progress::-webkit-progress-value {
+    background-color: var(--destaque-inverso); /* 👈 muda aqui */
+    border-radius: 10px;
 }
 
-#javascript {
-    width: 55%;
-}
 
-#java {
-    width: 40%;
-}
-
-#comunica {
-    width: 90%;
-}
-
-#trabalho-equipe {
-    width: 85%;
-}
-
-#adaptabilidade {
-    width: 80%;
-}
-
-#lidera {
-    width: 85%;
-}
 
 #education {
     grid-column: 2;
-    background-color: var(--fundo-principal);
-    margin: 0px 15px 0px 15px;
+    background-color: var(--fundo-card);
     font-family: var(--fonte-normal);
     border-radius: 6px;
 }
@@ -273,14 +276,14 @@ div.item {
 #education div.container {
     display: flex;
     flex-flow: row nowrap;
-    background-color: var(--cor3);
+    background-color: var(--destaque-inverso);
     margin: 5px 15px 15px 15px;
     border-radius: 6px;
     overflow: hidden;
 }
 
 #education div.item1{
-    background-color: var(--fundo-card);
+    background-color: var(--fundo-principal);
     margin-left: 3px;
     border-radius: 0px 6px 6px 0px;
     transform-origin: right;
@@ -290,6 +293,7 @@ div.item {
 
 #education div.item1:hover {
     transform: translateX(8px);
+    cursor: pointer;
 }
 
 #education > div.container > div.item1 > p{
@@ -311,10 +315,11 @@ div.item {
     padding-bottom: 2px;
 }
 
+
+
 #projectos {
     grid-column: 2;
-    margin: 0px 15px 0px 15px;
-    background-color: var(--fundo-principal);
+    background-color: var(--fundo-card);
     border-radius: 6px;
 }
 
@@ -323,7 +328,7 @@ div.item {
     flex-flow: column nowrap;
     justify-content: center;
     margin: 5px 15px 15px 15px;
-    background-color: var(--cor3);
+    background-color: var(--destaque-inverso);
     border-radius: 6px;
     overflow: hidden;
 
@@ -339,17 +344,19 @@ div.item {
     display: flex;
     flex-flow: column nowrap;
     margin-left: 3px;
+    padding-top: 4px;
     border-radius: 0px 6px 6px 0px;
-    background-color: var(--fundo-card);
+    background-color: var(--fundo-principal);
 }
 
 #projectos div.item2:hover {
     transition: transform 0.4s ease-in-out;
     transform: translateX(8px);
+    cursor: pointer;
 }
 
-#projectos  div.item2 > p, details, h4{
-    padding: 0px 6px 0px 6px;
+#projectos div.item2 > div.content > p, details, h4{
+    padding: 0px 0px 0px 6px;
     font-size: 0.9em;
     line-height: 1.3em;
     text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.065);
@@ -357,10 +364,7 @@ div.item {
 
 #projectos div.item2 > img {
     margin: 8px 8px 8px 8px;
-}
-
-#projectos > div.item > p {
-    padding: 0px 20px 0px 20px;
+    border-radius: 2px;
 }
 
 #projectos details {
@@ -373,7 +377,7 @@ div.item {
 
 #projectos a {
     text-decoration: none;
-    color: #0056a3;
+    color: var(--destaque-inverso);
 }
 
 #projectos .link {
@@ -383,9 +387,12 @@ div.item {
     align-items: center;
 }
 
-.content {
-    margin-left: 5px;
+#projectos .content {
+    padding-left: 5px;
+
 }
+
+
 
 footer {
     display: flex;
