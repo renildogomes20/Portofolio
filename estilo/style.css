@@ -307,11 +307,11 @@ progress::-webkit-progress-value {
 }
 
 #education .local-formation {
-    color: var(--cor3);
+    color: var(--destaque-inverso);
 }
 
 #education .learned-content {
-    color: rgba(0, 0, 0, 0.72);
+    color:var(--texto);
     padding-bottom: 2px;
 }
 
