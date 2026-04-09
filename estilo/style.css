@@ -31,7 +31,7 @@ body.escuro {
     --texto-inverso: #333333;
     --destaque: #ff5522;
     --destaque-inverso:#a73917;
-    --fundo-card: #444444;
+    --fundo-card: #3e3d3d;
 }
 
 body {
@@ -124,7 +124,7 @@ section#myinformation {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    background-color: var(--fundo-principal);
+    background-color: var(--fundo-card);
     padding: 15px;
     border-radius: 6px;
     box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.246);
