@@ -161,7 +161,7 @@ section#myinformation > div {
 }
 
 #myinformation  > p {
-    text-align: justify;
+    text-align: left;
     line-height: 1.3em;
     font-size: 1em;
 }
